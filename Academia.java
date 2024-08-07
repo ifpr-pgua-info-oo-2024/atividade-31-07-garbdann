@@ -1,13 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Academia {
     private String nome;
     private String endereco;
     private String telefone;
-    
+
+    List<Aluno> alunos;
 
     public Academia(String nome, String endereco, String telefone) {
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
+        alunos = new ArrayList<>();
     }
 
     public String getNome() {
@@ -34,7 +39,14 @@ public class Academia {
         this.telefone = telefone;
     }
 
-    public String toString () {
-        return "Nome: " + this.nome + "\nEndereço: " + this.endereco + "\nTelefone: " + this.telefone; 
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome +
+                "\nEndereço: " + endereco +
+                "\nTelefone: " + telefone;
     }
 }
